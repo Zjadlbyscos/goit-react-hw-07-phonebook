@@ -1,113 +1,130 @@
-# React homework template
+# Phonebook App
 
-Этот проект был создан при помощи
-[Create React App](https://github.com/facebook/create-react-app). Для знакомства
-и настройки дополнительных возможностей
-[обратись к документации](https://facebook.github.io/create-react-app/docs/getting-started).
+Phonebook is a simple React application that allows you to manage a list of
+contacts. You can add new contacts, delete existing ones, and filter the list to
+find specific contacts. This readme file provides an overview of the Phonebook
+application and how to use it.
 
-## Создание репозитория по шаблону
+## Features
 
-Используй этот репозиторий организации GoIT как шаблон для создания репозитория
-своего проекта. Для этого нажми на кнопку `«Use this template»` и выбери опцию
-`«Create a new repository»`, как показано на изображении.
+- **Add a Contact**: You can add a new contact to the phonebook by providing
+  their name and phone number.
 
-![Creating repo from a template step 1](./assets/template-step-1.png)
+- **Delete a Contact**: You can remove a contact from the phonebook.
 
-На следующем шаге откроется страница создания нового репозитория. Заполни поле
-его имени, убедись что репозиторий публичный, после чего нажми кнопку
-`«Create repository from template»`.
+- **Filter Contacts**: You can filter the list of contacts by name to quickly
+  find the ones you're looking for.
 
-![Creating repo from a template step 2](./assets/template-step-2.png)
+## Installation
 
-После того как репозиторий будет создан, необходимо перейти в настройки
-созданного репозитория на вкладку `Settings` > `Actions` > `General` как
-показано на изображении.
+To run the Phonebook application locally, follow these steps:
 
-![Settings GitHub Actions permissions step 1](./assets/gh-actions-perm-1.png)
+1. Clone the repository:# Phonebook App
 
-Проскролив страницу до самого конца, в секции `«Workflow permissions»` выбери
-опцию `«Read and write permissions»` и поставь галочку в чекбоксе. Это
-необходимо для автоматизации процесса деплоя проекта.
+Phonebook is a simple React application that allows you to manage a list of
+contacts. You can add new contacts, delete existing ones, and filter the list to
+find specific contacts. This readme file provides an overview of the Phonebook
+application and how to use it.
 
-![Settings GitHub Actions permissions step 2](./assets/gh-actions-perm-2.png)
+## Features
 
-Теперь у тебя есть личный репозиторий проекта, со структурой файлов и папок
-репозитория-шаблона. Далее работай с ним как с любым другим личным репозиторием,
-клонируй его себе на компьютер, пиши код, делай коммиты и отправляй их на
-GitHub.
+![App look](./assets/phonebook-look.png)
 
-## Подготовка к работе
+- **Add a Contact**: You can add a new contact to the phonebook by providing
+  their name and phone number.
 
-1. Убедись что на компьютере установлена LTS-версия Node.js.
-   [Скачай и установи](https://nodejs.org/en/) её если необходимо.
-2. Установи базовые зависимости проекта командой `npm install`.
-3. Запусти режим разработки, выполнив команду `npm start`.
-4. Перейди в браузере по адресу [http://localhost:3000](http://localhost:3000).
-   Эта страница будет автоматически перезагружаться после сохранения изменений в
-   файлах проекта.
+- **Delete a Contact**: You can remove a contact from the phonebook.
 
-## Деплой
+- **Filter Contacts**: You can filter the list of contacts by name to quickly
+  find the ones you're looking for.
 
-Продакшн версия проекта будет автоматически проходить линтинг, собираться и
-деплоиться на GitHub Pages, в ветку `gh-pages`, каждый раз когда обновляется
-ветка `main`. Например, после прямого пуша или принятого пул-реквеста. Для этого
-необходимо в файле `package.json` отредактировать поле `homepage`, заменив
-`your_username` и `your_repo_name` на свои, и отправить изменения на GitHub.
+## Installation
 
-```json
-"homepage": "https://your_username.github.io/your_repo_name/"
-```
+To run the Phonebook application locally, follow these steps:
 
-Далее необходимо зайти в настройки GitHub-репозитория (`Settings` > `Pages`) и
-выставить раздачу продакшн версии файлов из папки `/root` ветки `gh-pages`, если
-это небыло сделано автоматически.
+1. Clone the repository:
 
-![GitHub Pages settings](./assets/repo-settings.png)
+   ```bash
+   git clone [repository-url]
 
-### Статус деплоя
+   ```
 
-Статус деплоя крайнего коммита отображается иконкой возле его идентификатора.
+2. Change to the project directory:
+   ```bash
+   cd [repository-name]
 
-- **Желтый цвет** - выполняется сборка и деплой проекта.
-- **Зеленый цвет** - деплой завершился успешно.
-- **Красный цвет** - во время линтинга, сборки или деплоя произошла ошибка.
+   ```
+3. Install and start dependencies:
+   ```bash
+   npm install
+   npm start
+   ```
 
-Более детальную информацию о статусе можно посмотреть кликнув по иконке, и в
-выпадающем окне перейти по ссылке `Details`.
+The application should now be accessible in your web browser at
+http://localhost:3000.
 
-![Deployment status](./assets/deploy-status.png)
+## Usage
 
-### Живая страница
+**Adding a Contact**
 
-Через какое-то время, обычно пару минут, живую страницу можно будет посмотреть
-по адресу указанному в отредактированном свойстве `homepage`. Например, вот
-ссылка на живую версию для этого репозитория
-[https://goitacademy.github.io/react-homework-template](https://goitacademy.github.io/react-homework-template).
+1. Enter the name and phone number of the contact you want to add in the input
+   fields.
+2. Click the **Add Contact** button to add the contact to the list.
 
-Если открывается пустая страница, убедись что во вкладке `Console` нет ошибок
-связанных с неправильными путями к CSS и JS файлам проекта (**404**). Скорее
-всего у тебя неправильное значение свойства `homepage` в файле `package.json`.
+**Deleting a Contact**
 
-### Маршрутизация
+1. Find the contact you want to delete in the list.
+2. Click the **Delete** button next to the contact's name.
+3. Confirm the deletion in the pop-up dialog.
 
-Если приложение использует библиотеку `react-router-dom` для маршрутизации,
-необходимо дополнительно настроить компонент `<BrowserRouter>`, передав в пропе
-`basename` точное название твоего репозитория. Слеш в начале строки обязателен.
+**Filtering Contacts**
 
-```jsx
-<BrowserRouter basename="/your_repo_name">
-  <App />
-</BrowserRouter>
-```
+1. Enter a name or part of a name in the **Filter** input field.
+2. The list of contacts will be updated to display only those that match the
+   filter criteria.
 
-## Как это работает
+## How it works
 
-![How it works](./assets/how-it-works.png)
+The main component is **App**, defined in **App.jsx**.
 
-1. После каждого пуша в ветку `main` GitHub-репозитория, запускается специальный
-   скрипт (GitHub Action) из файла `.github/workflows/deploy.yml`.
-2. Все файлы репозитория копируются на сервер, где проект инициализируется и
-   проходит линтинг и сборку перед деплоем.
-3. Если все шаги прошли успешно, собранная продакшн версия файлов проекта
-   отправляется в ветку `gh-pages`. В противном случае, в логе выполнения
-   скрипта будет указано в чем проблема.
+## Dependencies
+
+- React: A JavaScript library for building user interfaces.
+
+  ````bash
+  git clone [repository-url]
+  cd [repository-name]
+  npm install
+  npm start ```
+  ````
+
+The application should now be accessible in your web browser at
+http://localhost:3000.
+
+## Usage
+
+**Adding a Contact**
+
+1. Enter the name and phone number of the contact you want to add in the input
+   fields.
+2. Click the **Add Contact** button to add the contact to the list.
+
+**Deleting a Contact**
+
+1. Find the contact you want to delete in the list.
+2. Click the **Delete** button next to the contact's name.
+3. Confirm the deletion in the pop-up dialog.
+
+**Filtering Contacts**
+
+1. Enter a name or part of a name in the **Filter** input field.
+2. The list of contacts will be updated to display only those that match the
+   filter criteria.
+
+## How it works
+
+The main component is **App**, defined in **App.jsx**.
+
+## Dependencies
+
+- React: A JavaScript library for building user interfaces.
