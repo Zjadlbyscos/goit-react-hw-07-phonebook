@@ -5,7 +5,7 @@ export const sliceFilter = createSlice({
   initialState: '',
   reducers: {
     qwery(state, action) {
-      return (state = action.payload);
+      return (state === action.payload);
     },
     filter(state, action) {},
   },
