@@ -10,7 +10,7 @@ const Contacts = ({ listContact }) => {
     return (
       <ul className={s.list} key={contact.id}>
         <li className={s.contact} key={contact.id}>
-          {contact.name} - {contact.number}
+          {contact.name} - {contact.phone}
           <button
             className={s.btn}
             onClick={() => {
