@@ -8,7 +8,7 @@ import style from './App.module.css';
 
 const App = () => {
   const filtered = useSelector(state => state.filter);
-  const contacts = useSelector(state => state.contacts);
+  const contacts = useSelector(state => state.contacts.items);
 
   const filterContact = e => {
     const filteredContacts = contacts.filter(contact =>
