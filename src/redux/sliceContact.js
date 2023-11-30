@@ -19,8 +19,8 @@ export const sliceContact = createSlice({
       {
      "createdAt": "2023-11-29T12:37:23.615Z",
     "name": "Brandi Bauch",
-    "phone": "(245) 544-2670 x0405",
-    "id": "3"
+    "phone": "(245) 544-2670",
+    "id": "1"
       },
     ],
     isLoading: false,
