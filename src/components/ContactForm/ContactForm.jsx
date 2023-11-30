@@ -1,15 +1,20 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { add } from 'redux/sliceContact';
-import { useState } from 'react';
+
+import { useState, useEffect } from 'react';
 
 import PropTypes from 'prop-types';
 
 import s from './ContactForm.module.css';
+import { addContactsThunk, getContactsThunk } from 'redux/constants';
 
 export const ContactForm = () => {
   const dispatch = useDispatch();
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
+
+  useEffect(() => {
+    dispatch(getContactsThunk());
+  }, [dispatch]);
 
   const handleChange = evt => {
     const { name, value } = evt.target;
@@ -19,13 +24,17 @@ export const ContactForm = () => {
     setName('');
     setNumber('');
   };
-  const contacts = useSelector(state => state.contacts);
+  const contacts = useSelector(state => state.contacts.items);
   return (
     <div className={s.wrapper}>
       <h2>Add Contact</h2>
       <form
         className={s.submit}
         onSubmit={e => {
+          const contact = {
+            name: name,
+            phone: number,
+          };
           e.preventDefault();
           if (
             contacts.some(
@@ -35,7 +44,7 @@ export const ContactForm = () => {
           ) {
             alert(`${name} is alredy in contacts`);
           } else {
-            dispatch(add({ name, number }));
+            dispatch(addContactsThunk(contact));
           }
           reset();
         }}
