@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { remove } from 'redux/sliceContact';
+import { delContactsThunk } from 'redux/constants';
 import React from 'react';
 
 import s from './Contacts.module.css';
@@ -14,7 +14,7 @@ const Contacts = ({ listContact }) => {
           <button
             className={s.btn}
             onClick={() => {
-              dispatch(remove(contact.id));
+              dispatch(delContactsThunk(contact.id));
             }}
           >
             Delete
